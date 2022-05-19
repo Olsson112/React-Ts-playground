@@ -5,7 +5,7 @@ import Content from "./content";
 import Header from "./header";
 
 
-const Layout: FC = (props) => {
+const Layout: FC = () => {
     return (
         <div style={{ ...columnFlex, ...fullScreen, ...background }}>
             <Header/>

@@ -1,8 +1,8 @@
-import { CSSProperties, useState } from 'react'
+import { FC } from 'react'
 import Layout from './layout'
 
 
-function App() {
+const App: FC = () => {
   
   return (
     <Layout/>

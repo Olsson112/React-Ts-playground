@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties, FC } from 'react';
 import { centeredContent } from '../style/common';
 import { Element } from './../data/elements'
 
@@ -7,7 +7,7 @@ interface Props {
 }
 
 /** React function component */
-export default function SectionItem(props: Props) {
+const SectionItem: FC<Props> = (props) => {
 
     return (
         <div style={{ ...gridItem, ...centeredContent }}>
@@ -48,3 +48,5 @@ const textStyle: CSSProperties = {
     color: '#1E1E1E',
     textShadow: '0 0 3px white'
 }
+
+export default SectionItem

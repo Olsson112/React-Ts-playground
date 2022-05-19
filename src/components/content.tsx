@@ -1,12 +1,10 @@
-import React, { CSSProperties, FC } from 'react';
+import { CSSProperties, FC } from 'react';
 import SectionItem from './sectionItem';
 import { elements } from '../data/elements';
 
 
 
-/** React function component */
 const Content: FC = (props) => {
-
     return (
         <div style={container}>
             {elements.map((element) => <SectionItem key={element.id} element={element} />)}

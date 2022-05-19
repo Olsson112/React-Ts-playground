@@ -1,8 +1,8 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties, FC } from 'react';
 import { colors } from '../data/colors';
 
 /** React function component */
-export default function Header() {
+const Header: FC = () => {
     return (
         <div style={header}>
             <h1 style={headerItem}>React Playground</h1>
@@ -28,3 +28,6 @@ const headerItem: CSSProperties = {
     alignItems: 'center',
     cursor: 'pointer'
 };
+
+
+export default Header

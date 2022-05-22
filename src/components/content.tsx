@@ -1,6 +1,7 @@
 import { CSSProperties, FC } from 'react';
 import SectionItem from './sectionItem';
 import { elements } from '../data/elements';
+import { colors } from '../data/colors';
 
 
 
@@ -18,7 +19,10 @@ const container: CSSProperties = {
     height: '100%',
     margin: '0.5em',
     justifyItems: 'stretch',
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    backgroundColor: colors.forth,
+    gap: "1em",
+    padding: "1em"
 }
 
 export default Content

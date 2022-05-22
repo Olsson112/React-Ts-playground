@@ -23,8 +23,7 @@ const SectionItem: FC<Props> = (props) => {
 const gridItem: CSSProperties = {
     position: 'relative',
     display: "flex",
-    margin: '0.5em',
-    height: '100%'
+    height: '100%',
 }
 
 const overlay: CSSProperties = {
@@ -41,7 +40,8 @@ const imageStyle: CSSProperties = {
     width: '100%',  
     height: '100%',
     objectFit: 'cover',
-    position: 'absolute'
+    position: 'absolute',
+    borderRadius: "10px"
 }
 
 const textStyle: CSSProperties = {

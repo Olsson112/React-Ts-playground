@@ -1,16 +1,15 @@
 import { CSSProperties, FC } from 'react';
+import { Link } from 'react-router-dom';
 import { colors } from '../data/colors';
 import { WorldElement } from '../data/elements';
 
-interface Props {
-    selectNewView: React.Dispatch<React.SetStateAction<WorldElement | undefined>>
-}
+interface Props {}
 
 /** React function component */
 const Navbar: FC<Props> = (props) => {
     return (
         <div style={header}>
-            <h1 onClick={() => props.selectNewView(undefined)} style={headerItem}>React Playground</h1>
+            <Link to={"/"} style={headerItem}>React Playground</Link>
         </div>
     );
 }
@@ -31,7 +30,9 @@ const headerItem: CSSProperties = {
     padding: 0,
     display: 'flex',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    textDecoration: "none",
+    color: colors.third
 };
 
 

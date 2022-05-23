@@ -1,21 +1,21 @@
 import { CSSProperties, FC } from 'react';
 import { centeredContent } from '../../style/common';
 import { WorldElement } from '../../data/elements'
+import { Link } from 'react-router-dom';
 
 interface Props {
     element: WorldElement
-    setCurrentView: React.Dispatch<React.SetStateAction<WorldElement | undefined>>
 }
 
 /** React function component */
 const NavigationItem: FC<Props> = (props) => {
     return (
-        <div onClick={() => props.setCurrentView(props.element)} style={{ ...gridItem, ...centeredContent }}>
+        <Link to={`/${props.element.id}`} style={{ ...gridItem, ...centeredContent }}>
             <img src={props.element.image} style={imageStyle} />
             <div style={overlay}>
                 <h1 style={textStyle}>{props.element.name}</h1>
             </div>
-        </div>
+        </Link>
     );
 }
 

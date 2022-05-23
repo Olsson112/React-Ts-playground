@@ -3,14 +3,12 @@ import NavigationItem from './navigationItem';
 import { elements, WorldElement } from '../../data/elements';
 import { colors } from '../../data/colors';
 
-interface Props {
-    setCurrentView: React.Dispatch<React.SetStateAction<WorldElement | undefined>>
-}
+interface Props {}
 
 const MasterView: FC<Props> = (props) => {
     return (
         <div style={container}>
-            {elements.map((element) => <NavigationItem setCurrentView={props.setCurrentView} key={element.id} element={element} />)}
+            {elements.map((element) => <NavigationItem key={element.id} element={element} />)}
         </div>
     );
 }

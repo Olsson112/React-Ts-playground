@@ -1,16 +1,25 @@
 import { CSSProperties, FC } from "react";
-import { WorldElement } from "../../data/elements";
+import { useParams, Navigate } from "react-router-dom";
+import { elements, WorldElement } from "../../data/elements";
 import { fullscreenAbsolute } from "../../style/common";
 
 
-interface Props {
-    currentView: WorldElement
-}
+interface Props {}
 
 const DetailView: FC<Props> = (props) => {
+
+    // Find i elements
+    const { elementId } = useParams()
+
+    const foundElement = elements.find((element) => Number(elementId) == element.id)
+
+    if(!foundElement) {
+        return <Navigate to="/" />
+    }
+
     return (
         <div style={container}>
-            <img style={fullscreenAbsolute} src={props.currentView.image} alt="" />
+            <img style={fullscreenAbsolute} src={foundElement!.image} alt="" />
         </div>
     )
 }

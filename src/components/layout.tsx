@@ -7,13 +7,10 @@ import Navbar from "./navbar";
 
 
 const Layout: FC = () => {
-
-    const [currentView, setCurrentView] = useState<WorldElement | undefined>()
-
     return (
         <div style={{ ...columnFlex, ...fullScreen, ...background }}>
-            <Navbar selectNewView={setCurrentView} />
-            <ViewContainer currentView={currentView} setCurrentView={setCurrentView} />
+            <Navbar />
+            <ViewContainer />
         </div>
     )
 }

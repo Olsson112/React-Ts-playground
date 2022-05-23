@@ -1,19 +1,20 @@
 import { FC } from "react";
+import { Link, Route, Routes } from "react-router-dom";
 import { WorldElement } from "../../data/elements";
 import DetailView from "./detailview";
 import MasterView from "./masterView";
 
 
-interface Props {
-    currentView: WorldElement | undefined
-    setCurrentView: React.Dispatch<React.SetStateAction<WorldElement | undefined>>
-}
+interface Props {}
 
 const ViewContainer: FC<Props> = (props) => {
     return (
-        props.currentView == undefined ? (
-            <MasterView setCurrentView={props.setCurrentView} />
-        ) : <DetailView currentView={props.currentView} />
+        <>
+            <Routes>
+                <Route path="/" element={ <MasterView /> } />
+                <Route path="/:elementId" element={ <DetailView /> } />
+            </Routes>
+        </>
     )
 }
 

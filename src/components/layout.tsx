@@ -1,15 +1,19 @@
-import { CSSProperties, FC } from "react";
+import { CSSProperties, FC, useState } from "react";
 import { colors } from "../data/colors";
+import { elements, WorldElement } from "../data/elements";
 import { columnFlex, fullScreen } from "../style/common";
-import Content from "./content";
-import Header from "./header";
+import ViewContainer from "./views/viewContainer";
+import Navbar from "./navbar";
 
 
 const Layout: FC = () => {
+
+    const [currentView, setCurrentView] = useState<WorldElement | undefined>()
+
     return (
         <div style={{ ...columnFlex, ...fullScreen, ...background }}>
-            <Header/>
-            <Content/>
+            <Navbar selectNewView={setCurrentView} />
+            <ViewContainer currentView={currentView} setCurrentView={setCurrentView} />
         </div>
     )
 }

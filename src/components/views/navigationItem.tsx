@@ -1,16 +1,16 @@
 import { CSSProperties, FC } from 'react';
-import { centeredContent } from '../style/common';
-import { Element } from './../data/elements'
+import { centeredContent } from '../../style/common';
+import { WorldElement } from '../../data/elements'
 
 interface Props {
-    element: Element
+    element: WorldElement
+    setCurrentView: React.Dispatch<React.SetStateAction<WorldElement | undefined>>
 }
 
 /** React function component */
-const SectionItem: FC<Props> = (props) => {
-
+const NavigationItem: FC<Props> = (props) => {
     return (
-        <div style={{ ...gridItem, ...centeredContent }}>
+        <div onClick={() => props.setCurrentView(props.element)} style={{ ...gridItem, ...centeredContent }}>
             <img src={props.element.image} style={imageStyle} />
             <div style={overlay}>
                 <h1 style={textStyle}>{props.element.name}</h1>
@@ -49,4 +49,4 @@ const textStyle: CSSProperties = {
     textShadow: '0 0 3px white'
 }
 
-export default SectionItem
+export default NavigationItem

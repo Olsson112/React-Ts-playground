@@ -15,7 +15,7 @@ interface Props {}
 
 const ViewContainer: React.FC<Props> = (props) => {
     return (
-        <Suspense fallback={<Spinner />}>
+        <Suspense fallback={<Spinner color="white" />}>
             <Routes>
                 <Route path="/" element={ <MasterView /> } />
                 <Route path="/:elementId" element={ <DetailView /> } />

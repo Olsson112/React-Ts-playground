@@ -2,6 +2,7 @@ import { CSSProperties, FC } from 'react';
 import { centeredContent } from '../../style/common';
 import { WorldElement } from '../../data/elements'
 import { Link } from 'react-router-dom';
+import { testErrorBoundary } from '../errorBoundary';
 
 interface Props {
     element: WorldElement
@@ -9,6 +10,11 @@ interface Props {
 
 /** React function component */
 const NavigationItem: FC<Props> = (props) => {
+
+    if(props.element.id == 2) {
+        testErrorBoundary()
+    }
+
     return (
         <Link to={`/${props.element.id}`} style={{ ...gridItem, ...centeredContent }}>
             <img src={props.element.image} style={imageStyle} />

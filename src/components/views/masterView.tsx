@@ -24,7 +24,6 @@ const container: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
-    margin: '0.5em',
     justifyItems: 'stretch',
     alignItems: 'stretch',
     backgroundColor: colors.forth,

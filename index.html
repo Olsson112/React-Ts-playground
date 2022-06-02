@@ -6,15 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         box-sizing: border-box;
         margin: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
+
+      #modal-root {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: rgba(black, black, black, 0.5);
+        color: "white"
+      }
+      
   </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Div will be added for portal here ( <div id="modal-root"></div> )  -->
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

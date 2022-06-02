@@ -5,28 +5,33 @@ import EarthImage from '/src/assets/earth.jpg'
 
 
 export interface WorldElement {
-    id: number,
+    id: number
     name: string
     image: string
+    textColor: string
 }
 
 export const elements: WorldElement[] = [
     {
         id: 1,
         name: "Fire",
-        image: FireImage
+        image: FireImage,
+        textColor: "white"
     }, {
         id: 2,
         name: "Water",
-        image: WaterImage
+        image: WaterImage,
+        textColor: "black"
     }, {
         id: 3,
         name: "Air",
-        image: AirImage
+        image: AirImage,
+        textColor: "black"
     }, {
         id: 4,
         name: "Earth",
-        image: EarthImage
+        image: EarthImage,
+        textColor: "white"
     }
 ]
 

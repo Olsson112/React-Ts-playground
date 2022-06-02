@@ -38,7 +38,8 @@ const header: (devices: Device) => CSSProperties = (devices) => {
         alignItems: 'center',
         paddingLeft: '1em',
         paddingRight: '1em',
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        zIndex: 2
     }
 };
 

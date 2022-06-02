@@ -1,8 +1,7 @@
-import { CSSProperties, FC, useContext, useEffect } from 'react';
+import { CSSProperties, FC, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { colors } from '../data/colors';
-import { WorldElement } from '../data/elements';
-import { Device, DeviceContext, DeviceContextData } from './context/DeviceProvider';
+import { Device, DeviceContext } from './context/DeviceProvider';
 
 interface Props {}
 
